@@ -77,7 +77,7 @@ function onlyNumber(string) {
 
                 list.push(obj);
             } catch (error) {
-                console.log(error);
+                 continue;
             }      
         }
         c++;
@@ -85,7 +85,6 @@ function onlyNumber(string) {
 
     fs.writeFile('lista.json', JSON.stringify(list), function (err) {
         if (err) throw err;
-        console.log('Salvo!');
     });
 
     await page.waitForTimeout(3000);
